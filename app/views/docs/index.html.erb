@@ -1,0 +1,16 @@
+<div>
+  <% @docs.each do |doc| %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <p><%= link_to doc.title, doc_path(doc) %></p>
+      <p><%= doc.content %></p>
+      <p><%= doc.created_at %></p>
+    </div>
+  </div>
+  <% end %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <%= link_to 'Create New Doc', new_doc_path %>
+    </div>
+  </div>
+</div>
