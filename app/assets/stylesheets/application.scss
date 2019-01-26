@@ -11,11 +11,17 @@
 }
 
 .alert-notice {
-  background-color:	#cce5fd;
+  background-color: #cce5fd;
   color: blue;
 }
 
 .home {
   width: 80%;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .home {
+    width: 100%;
+  }
 }
