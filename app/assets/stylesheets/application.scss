@@ -1,0 +1,11 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+.row {
+  margin-top: 3rem;
+}
+
+.cancel,
+.form-title {
+  margin-left: 15px;
+}

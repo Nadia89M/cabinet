@@ -7,11 +7,12 @@ class DocsController < ApplicationController
   def show
   end
   def new
-    @doc = Doc.new
+    @doc = current_user.docs.build
   end
   def create
-    @doc = Doc.new(doc_params)
+    @doc = current_user.docs.build(doc_params)
     if @doc.save 
+      flash[:success] = "Doc was created successfully!"
       redirect_to @doc
     else 
       render 'new'
@@ -21,6 +22,7 @@ class DocsController < ApplicationController
   end
   def update
     if @doc.update(doc_params)
+      flash[:success] = "Doc was updated successfully!"
       redirect_to @doc
     else
       render 'edit'
@@ -28,6 +30,7 @@ class DocsController < ApplicationController
   end 
   def destroy
     @doc.destroy
+    flash[:success] = "Doc deleted successfully"
     redirect_to docs_path
   end 
 

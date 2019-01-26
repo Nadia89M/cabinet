@@ -1,3 +1,7 @@
-<h1>Edit Doc</h1>
-<%= render 'form' %>
-<%=link_to 'cancel', doc_path%>
+<div class="row">
+  <div class="offset-md-2 col-md-10">
+    <h1 class="form-title">Edit Doc</h1>
+    <%= render 'form' %>
+    <%=link_to 'cancel', doc_path, class: "btn btn-primary cancel"%>
+  </div>
+</div>
